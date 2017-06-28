@@ -41,6 +41,10 @@ public class User {
 		this.email = email;
 	}
 
+	public String getPassword() {
+		return this.password;
+	}
+	
 	public void update(User modifiedUser) {
 		this.password = modifiedUser.password;
 		this.name = modifiedUser.name;
