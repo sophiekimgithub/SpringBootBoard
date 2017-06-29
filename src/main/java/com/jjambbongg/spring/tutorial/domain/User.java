@@ -12,7 +12,7 @@ public class User {
 	@GeneratedValue
 	private Long id;
 	
-	@Column(nullable=false, length=20)
+	@Column(nullable=false, length=20, unique=true)
 	private String userId;
 	
 	private String password;
@@ -40,17 +40,18 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	public Long getId() {
-		return this.id;
-	}
 	
-	public String getUserId() {
-		return this.userId;
+	public boolean matchId(Long id) {
+		if(id==null) {
+			return false;
+		}
+		return id.equals(this.id);
 	}
-	
-	public String getPassword() {
-		return this.password;
+	public boolean matchPassword(String password) {
+		if(password==null) {
+			return false;
+		}
+		return password.equals(this.password);
 	}
 	
 	public void update(User modifiedUser) {
