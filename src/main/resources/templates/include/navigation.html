@@ -49,11 +49,15 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse2">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="../index.html">Posts</a></li>
+                <li class="active"><a href="/">Posts</a></li>
+                {{^sessionedUser}}
                 <li><a href=/users/loginForm role="button">Login</a></li>
                 <li><a href="/users/form" role="button">Register</a></li>
-                <li><a href="#" role="button">Logout</a></li>
-                <li><a href="#" role="button">Modify</a></li>
+                {{/sessionedUser}}
+                {{#sessionedUser}}
+                <li><a href="/users/logout" role="button">Logout</a></li>
+                <li><a href="/users/{{id}}/form" role="button">Modify</a></li>
+            	{{/sessionedUser}}
             </ul>
         </div>
     </div>

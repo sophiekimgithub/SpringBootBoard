@@ -760,3 +760,6 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/jjamb
 	at org.h2.mvstore.FileStore.open(FileStore.java:173)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:347)
 	... 89 more
+2017-06-28 15:40:19 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+insert into users(user_id, password, name, email) values('userid1','pass','name1','email1@gmail.com') [42102-196]

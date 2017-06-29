@@ -1,0 +1,2 @@
+insert into user(user_id, password, name, email) values('userid1','pass1','name1','email1@gmail.com') 
+insert into user(user_id, password, name, email) values('userid2','pass2','name2','email2@gmail.com') 

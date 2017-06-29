@@ -41,6 +41,14 @@ public class User {
 		this.email = email;
 	}
 
+	public Long getId() {
+		return this.id;
+	}
+	
+	public String getUserId() {
+		return this.userId;
+	}
+	
 	public String getPassword() {
 		return this.password;
 	}
